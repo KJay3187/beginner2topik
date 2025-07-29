@@ -3,7 +3,6 @@
 html {
     scroll-behavior: smooth;
     height: 100%;
-    overflow-y: auto;
 }
 body {
     font-family: 'Inter', sans-serif;
@@ -12,8 +11,6 @@ body {
     padding: 0;
     min-height: 100vh;
     box-sizing: border-box;
-    position: relative;
-    overflow-x: hidden;
 }
 .notebook-page {
     background-color: #ffffff;
@@ -26,184 +23,39 @@ body {
     box-sizing: border-box;
     line-height: 1.5;
     margin: 0 auto;
-    overflow: visible;
 }
-.stage-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 10px;
-    text-align: center;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #a0aec0;
-}
-.purpose-section {
-    font-size: 0.95rem;
-    color: #4a5568;
-    margin-bottom: 20px;
-    padding: 10px 15px;
-    background-color: #e2e8f0;
-    border-radius: 6px;
-    border-left: 4px solid #63b3ed;
-}
-.tutor-note {
-    font-size: 0.95rem;
-    color: #9a6700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px 15px;
-    background-color: #fefcbf;
-    border-radius: 6px;
-    border-left: 4px solid #f6ad55;
-}
-.tutor-note .tutor-note-title {
-    font-weight: 700;
-    color: #b45309;
-    margin-bottom: 5px;
-}
-.tutor-note ul {
-    list-style: disc;
-    list-style-position: inside;
-    margin-left: 5px;
-}
-.intro-section {
-    margin-bottom: 20px;
-    padding: 10px 15px;
-    background-color: #ecfdf5;
-    border-radius: 6px;
-    border: 1px solid #a7f3d0;
-}
-.intro-section .intro-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #059669;
-    margin-bottom: 8px;
-}
-.intro-section ul {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
-    font-size: 0.9rem;
-    color: #10b981;
-}
-.intro-section ul li {
-    margin-bottom: 3px;
-    position: relative;
-    padding-left: 18px;
-}
-.intro-section ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #059669;
-    font-weight: bold;
-    font-size: 1.2em;
-    line-height: 1;
-}
-.section-heading {
-    font-size: 1.35rem;
-    font-weight: 600;
-    color: #2d3748;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 1px dashed #cbd5e0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    scroll-margin-top: 50px;
-}
-.section-heading .title-content {
-    display: flex;
-    align-items: center;
-}
-.section-heading .number {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #4299e1;
-    margin-right: 10px;
-}
-.section-heading .up-arrow {
-    cursor: pointer;
-    color: #63b3ed;
-    transition: transform 0.2s ease-in-out;
-}
-.section-heading .up-arrow:hover {
-    transform: translateY(-2px);
-    color: #4299e1;
-}
-.content-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-.column {
-    flex: 1 1 48%;
-    min-width: 280px;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-th, td {
-    padding: 7px 9px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    font-size: 0.85rem;
-}
-th {
-    font-weight: 600;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-td {
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-.hangul-char-col {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2d3748;
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.hangul-char-col span:first-child {
-    flex-shrink: 0;
-}
-.audio-icon {
-    cursor: pointer;
-    color: #63b3ed;
-    transition: color 0.2s ease;
-    flex-shrink: 0;
-    margin-left: 8px;
-}
-.audio-icon:hover {
-    color: #4299e1;
-}
-.vowels-table th { background-color: #63b3ed; }
-.vowels-table td { background-color: #e0f2fe; }
-.diphthongs-table th { background-color: #f6ad55; }
-.diphthongs-table td { background-color: #fffaf0; }
-.basic-consonants-table th { background-color: #48bb78; }
-.basic-consonants-table td { background-color: #e6fffa; }
+.stage-title { font-size: 1.8rem; font-weight: 700; color: #2d3748; margin-bottom: 10px; text-align: center; padding-bottom: 8px; border-bottom: 2px solid #a0aec0; }
+.purpose-section { font-size: 0.95rem; color: #4a5568; margin-bottom: 20px; padding: 10px 15px; background-color: #e2e8f0; border-radius: 6px; border-left: 4px solid #63b3ed; }
+.tutor-note { font-size: 0.95rem; color: #9a6700; margin-top: 20px; margin-bottom: 20px; padding: 10px 15px; background-color: #fefcbf; border-radius: 6px; border-left: 4px solid #f6ad55; }
+.tutor-note .tutor-note-title { font-weight: 700; color: #b45309; margin-bottom: 5px; }
+.tutor-note ul { list-style: disc; list-style-position: inside; margin-left: 5px; }
+.intro-section { margin-bottom: 20px; padding: 10px 15px; background-color: #ecfdf5; border-radius: 6px; border: 1px solid #a7f3d0; }
+.intro-section .intro-title { font-size: 1.1rem; font-weight: 600; color: #059669; margin-bottom: 8px; }
+.intro-section ul { list-style: none; padding-left: 0; margin-left: 0; font-size: 0.9rem; color: #10b981; }
+.intro-section ul li { margin-bottom: 3px; position: relative; padding-left: 18px; }
+.intro-section ul li::before { content: '•'; position: absolute; left: 0; color: #059669; font-weight: bold; font-size: 1.2em; line-height: 1; }
+.section-heading { font-size: 1.35rem; font-weight: 600; color: #2d3748; margin-top: 25px; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 1px dashed #cbd5e0; display: flex; align-items: center; justify-content: space-between; scroll-margin-top: 50px; }
+.section-heading .title-content { display: flex; align-items: center; }
+.section-heading .number { font-size: 1.5rem; font-weight: 700; color: #4299e1; margin-right: 10px; }
+.section-heading .up-arrow { cursor: pointer; color: #63b3ed; transition: transform 0.2s ease-in-out; }
+.section-heading .up-arrow:hover { transform: translateY(-2px); color: #4299e1; }
+.content-columns { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
+.column { flex: 1 1 48%; min-width: 280px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 15px; border-radius: 8px; overflow: hidden; }
+th, td { padding: 7px 9px; text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.3); font-size: 0.85rem; }
+th { font-weight: 600; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; }
+td { color: #333; background-color: rgba(255, 255, 255, 0.8); }
+.hangul-char-col { font-size: 1.5rem; font-weight: 700; color: #2d3748; width: 25%; display: flex; align-items: center; justify-content: space-between; }
+.hangul-char-col span:first-child { flex-shrink: 0; }
+.audio-icon { cursor: pointer; color: #63b3ed; transition: color 0.2s ease; flex-shrink: 0; margin-left: 8px; }
+.audio-icon:hover { color: #4299e1; }
+.vowels-table th { background-color: #63b3ed; } .vowels-table td { background-color: #e0f2fe; }
+.diphthongs-table th { background-color: #f6ad55; } .diphthongs-table td { background-color: #fffaf0; }
+.basic-consonants-table th { background-color: #48bb78; } .basic-consonants-table td { background-color: #e6fffa; }
 .double-consonants-table th { background-color: #9f7aea; }
-.double-consonants-table td {
-    background-color: #e9d8fd;
-    color: #6b46c1;
-    font-weight: 600;
-}
-.double-consonants-table td .hangul-char-col {
-    color: #553c9a;
-}
-.romanization-col { width: 25%; }
-.word-col { width: 50%; }
+.double-consonants-table td { background-color: #e9d8fd; color: #6b46c1; font-weight: 600; }
+.double-consonants-table td .hangul-char-col { color: #553c9a; }
+.romanization-col { width: 25%; } .word-col { width: 50%; }
 .syllable-block-info { background-color: #f8fafc; border-radius: 8px; padding: 15px; margin-top: 15px; border: 1px solid #edf2f7; }
 .syllable-block-info p { margin-bottom: 10px; color: #333; }
 .syllable-example { display: flex; align-items: center; gap: 6px; margin-bottom: 12px; }
@@ -214,10 +66,8 @@ td {
 .content-block ul { list-style: disc; list-style-position: inside; margin-left: 15px; margin-bottom: 10px; color: #333; font-size: 0.9rem; }
 .content-block ul li { margin-bottom: 5px; }
 .table-title { font-size: 1.1rem; font-weight: 600; color: #4a5568; margin-top: 15px; margin-bottom: 10px; }
-.batchim-table th { background-color: #805ad5; }
-.batchim-table td { background-color: #ede9fe; }
-.sound-change-table th { background-color: #d69e2e; }
-.sound-change-table td { background-color: #fefcbf; }
+.batchim-table th { background-color: #805ad5; } .batchim-table td { background-color: #ede9fe; }
+.sound-change-table th { background-color: #d69e2e; } .sound-change-table td { background-color: #fefcbf; }
 .hangul-example { font-size: 1.1rem; font-weight: 600; color: #2d3748; margin-top: 5px; margin-bottom: 5px; display: flex; align-items: center; flex-wrap: wrap; }
 .hangul-example .sound-change-icon { flex-shrink: 0; }
 .hangul-example .sound-change-arrow { color: #ef4444; font-weight: bold; margin: 0 5px; flex-shrink: 0; }
@@ -247,16 +97,16 @@ td {
 }
 
 
-/* === START: NEW SIDEBAR STYLES (REPLACES PREVIOUS SIDEBAR CODE) === */
+/* === START: CORRECTED SIDEBAR STYLES === */
 
-/* MOBILE-FIRST Styles (for the slide-out menu on click) */
+/* MOBILE-FIRST Styles (for click-to-open menu) */
 #sidebar {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
-    width: 300px; /* Full width for mobile view when open */
-    background-color: #f8fafc;
+    width: 300px;
+    background-color: #ffffff; /* Changed to white for a cleaner look */
     border-right: 1px solid #e2e8f0;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     z-index: 50;
@@ -280,11 +130,11 @@ td {
     text-decoration: none;
     display: flex;
     align-items: center;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border-radius: 6px;
     transition: background-color 0.2s ease;
     cursor: pointer;
-    white-space: nowrap; /* Prevent text wrapping during transition */
+    white-space: nowrap;
 }
 #sidebar ul li a:hover {
     background-color: #ebf8ff;
@@ -292,22 +142,21 @@ td {
 }
 #sidebar ul li a strong {
     color: #2d3748;
-    margin-right: 8px;
-    min-width: 20px;
+    margin-right: 12px;
+    width: 20px;
     text-align: center;
-    transition: margin 0.3s ease-in-out;
 }
 
-/* DESKTOP Styles (for the hover-to-expand effect) */
+/* DESKTOP Styles (for hover-to-expand effect) */
 @media (min-width: 1024px) {
     .main-content {
-        /* Add left padding to make space for the collapsed sidebar */
-        padding: 20px 20px 20px 100px;
-        transition: padding-left 0.3s ease-in-out; /* Smooth transition */
+        /* Push content to the right to make space for the collapsed sidebar */
+        margin-left: 80px;
+        transition: margin-left 0.3s ease-in-out;
+        padding: 20px;
     }
-    
     #sidebar {
-        /* Override mobile fixed position and set collapsed width */
+        /* Set collapsed width and make it visible */
         position: fixed;
         width: 80px;
         transform: translateX(0);
@@ -315,36 +164,27 @@ td {
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
     #sidebar:hover {
-        /* Expand the sidebar on hover */
+        /* Expand the sidebar to full width on hover */
         width: 300px;
     }
-    
-    /* Hide text when sidebar is collapsed */
+
+    /* Hide the text spans by default on desktop */
     #sidebar:not(:hover) h2 span,
     #sidebar:not(:hover) ul li a span {
         opacity: 0;
         visibility: hidden;
     }
-    
-    /* Style for the text spans inside links */
+
+    /* Transition for the text spans to fade in */
     #sidebar h2 span,
     #sidebar ul li a span {
+        opacity: 1;
+        visibility: visible;
         transition: opacity 0.2s ease-in-out;
-        transition-delay: 0.1s; /* Add a small delay so it appears after expanding */
+        transition-delay: 0.1s; /* Delay fade-in until after sidebar expands */
     }
 
-    #sidebar h2 {
-        padding-left: 10px;
-    }
-    
-    /* Adjust padding and number margin for alignment */
-    #sidebar ul li a {
-        padding-left: 20px;
-    }
-    #sidebar ul li a strong {
-        margin-left: 5px;
-    }
-    #sidebar:hover ul li a strong {
-        margin-left: 0;
+    #sidebar h2, #sidebar ul li a {
+        padding-left: 25px; /* Center content in collapsed view */
     }
 }
