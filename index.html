@@ -15,279 +15,114 @@
     
     <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
 
-    <div class="page-container">
-        <aside id="sidebar" class="sidebar-closed">
-            <div class="p-4">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-xl font-bold text-gray-700"><span>목차 (Contents)</span></h2>
-                    <button id="close-menu-button" class="lg:hidden p-1 text-gray-500 hover:text-gray-800">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                    </button>
-                </div>
+    <aside id="sidebar" class="sidebar-closed">
+        <div class="p-4">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-gray-700"><span>목차 (Contents)</span></h2>
+                <button id="close-menu-button" class="lg:hidden p-1 text-gray-500 hover:text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <ul>
+                <li><a onclick="scrollToSection(event, 'vowels-section')"><strong>1.</strong> <span>Basic & Compound Vowels</span></a></li>
+                <li><a onclick="scrollToSection(event, 'consonants-section')"><strong>2.</strong> <span>Basic & Double Consonants (자음)</span></a></li>
+                <li><a onclick="scrollToSection(event, 'syllable-blocks-section')"><strong>3.</strong> <span>Syllable Blocks & Stroke Order</span></a></li>
+                <li><a onclick="scrollToSection(event, 'final-consonants-section')"><strong>4.</strong> <span>Final Consonants (받침)</span></a></li>
+                <li><a onclick="scrollToSection(event, 'linking-sounds-section')"><strong>5.</strong> <span>The #1 Pronunciation Rule: Linking (연음)</span></a></li>
+                <li><a onclick="scrollToSection(event, 'advanced-rules-section')"><strong>6.</strong> <span>Advanced Pronunciation Rules</span></a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="notebook-page">
+            <h1 class="stage-title">Stage 1 – Hangul Mastery & Pronunciation Foundations</h1>
+
+            <div class="intro-section">
+                <h3 class="intro-title">한글 (Hangul) Overview</h3>
                 <ul>
-                    <li><a onclick="scrollToSection(event, 'vowels-section')"><strong>1.</strong> <span>Basic & Compound Vowels</span></a></li>
-                    <li><a onclick="scrollToSection(event, 'consonants-section')"><strong>2.</strong> <span>Basic & Double Consonants (자음)</span></a></li>
-                    <li><a onclick="scrollToSection(event, 'syllable-blocks-section')"><strong>3.</strong> <span>Syllable Blocks & Stroke Order</span></a></li>
-                    <li><a onclick="scrollToSection(event, 'final-consonants-section')"><strong>4.</strong> <span>Final Consonants (받침)</span></a></li>
-                    <li><a onclick="scrollToSection(event, 'linking-sounds-section')"><strong>5.</strong> <span>The #1 Pronunciation Rule: Linking (연음)</span></a></li>
-                    <li><a onclick="scrollToSection(event, 'advanced-rules-section')"><strong>6.</strong> <span>Advanced Pronunciation Rules</span></a></li>
+                    <li>10 basic vowels (모음)</li>
+                    <li>14 basic consonants (자음)</li>
+                    <li>5 double (tense) consonants</li>
+                    <li>11 compound vowels</li>
                 </ul>
             </div>
-        </aside>
 
-        <main class="main-content">
-            <div class="notebook-page">
-                <h1 class="stage-title">Stage 1 – Hangul Mastery & Pronunciation Foundations</h1>
+            <div class="purpose-section">
+                <p><strong class="font-semibold">Purpose:</strong> Build a clear and confident foundation in reading, writing, and pronouncing Korean characters (Hangul).</p>
+            </div>
 
-                <div class="intro-section">
-                    <h3 class="intro-title">한글 (Hangul) Overview</h3>
-                    <ul>
-                        <li>10 basic vowels (모음)</li>
-                        <li>14 basic consonants (자음)</li>
-                        <li>5 double (tense) consonants</li>
-                        <li>11 compound vowels</li>
-                    </ul>
+            <h2 class="section-heading" id="vowels-section">
+                <div class="title-content">
+                    <span class="number">1.</span> Basic & Compound Vowels
                 </div>
+                <a href="#sidebar" class="up-arrow" onclick="scrollToSection(event, 'sidebar')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                    </svg>
+                </a>
+            </h2>
+            <p class="text-gray-700 text-sm mb-4">Read and pronounce single and combined Korean vowel characters.</p>
 
-                <div class="purpose-section">
-                    <p><strong class="font-semibold">Purpose:</strong> Build a clear and confident foundation in reading, writing, and pronouncing Korean characters (Hangul).</p>
+            <div class="content-columns">
+                <div class="column">
+                    <h3 class="subsection-title">Basic Vowels (모음)</h3>
+                    <table class="vowels-table rounded-lg shadow-md">
+                        <thead>
+                            <tr><th class="rounded-tl-lg">Letter</th><th>Rom.</th><th class="rounded-tr-lg">Word</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="hangul-char-col"><span>ㅏ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>a</td><td>가다 (to go)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅑ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>ya</td><td>약 (medicine)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅓ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>eo</td><td>없다 (to not exist)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅕ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>yeo</td><td>여기 (here)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅗ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>o</td><td>오다 (to come)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅛ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>yo</td><td>교실 (classroom)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅜ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>u</td><td>우리 (we/us)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅠ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>yu</td><td>유명하다 (to be famous)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅡ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>eu</td><td>크다 (to be big)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅣ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>i</td><td>이름 (name)</td></tr>
+                        </tbody>
+                    </table>
                 </div>
+                <div class="column">
+                    <h3 class="subsection-title">Diphthongs (이중모음)</h3>
+                    <table class="diphthongs-table rounded-lg shadow-md">
+                        <thead>
+                            <tr><th class="rounded-tl-lg">Letter</th><th>Rom.</th><th class="rounded-tr-lg">Word</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="hangul-char-col"><span>ㅐ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>ae</td><td>개 (dog)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅒ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>yae</td><td>시계 (watch/clock)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅔ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>e</td><td>네 (yes)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅖ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>ye</td><td>예쁘다 (to be pretty)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅘ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>wa</td><td>과일 (fruit)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅙ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>wae</td><td>회사 (company)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅚ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>oe</td><td>되다 (to become)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅝ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>wo</td><td>뭐 (what)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅞ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>we</td><td>스웨터 (sweater)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅟ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>wi</td><td>쉬다 (to rest)</td></tr>
+                            <tr><td class="hangul-char-col"><span>ㅢ</span><span class="audio-icon" onclick="playAudio('')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span></td><td>ui</td><td>의자 (chair)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-                <h2 class="section-heading" id="vowels-section">
-                    <div class="title-content">
-                        <span class="number">1.</span> Basic & Compound Vowels
-                    </div>
-                    <a href="#sidebar" class="up-arrow" onclick="scrollToSection(event, 'sidebar')">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-                        </svg>
-                    </a>
-                </h2>
-                <p class="text-gray-700 text-sm mb-4">Read and pronounce single and combined Korean vowel characters.</p>
-
-                <div class="content-columns">
-                    <div class="column">
-                        <h3 class="subsection-title">Basic Vowels (모음)</h3>
-                        <table class="vowels-table rounded-lg shadow-md">
-                            <thead>
-                                <tr>
-                                    <th class="rounded-tl-lg">Letter</th>
-                                    <th>Rom.</th>
-                                    <th class="rounded-tr-lg">Word</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅏ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/vowels/a.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>a</td><td>가다 (to go)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅑ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/vowels/ya.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>ya</td><td>약 (medicine)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅓ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/vowels/eo.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>eo</td><td>없다 (to not exist)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅕ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/vowels/yeo.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>yeo</td><td>여기 (here)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅗ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/vowels/o.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>o</td><td>오다 (to come)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅛ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/vowels/yo.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>yo</td><td>교실 (classroom)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅜ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/vowels/u.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>u</td><td>우리 (we/us)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅠ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/vowels/yu.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>yu</td><td>유명하다 (to be famous)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅡ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/vowels/eu.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>eu</td><td>크다 (to be big)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅣ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/vowels/i.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>i</td><td>이름 (name)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="column">
-                        <h3 class="subsection-title">Diphthongs (이중모음)</h3>
-                        <table class="diphthongs-table rounded-lg shadow-md">
-                            <thead>
-                                <tr>
-                                    <th class="rounded-tl-lg">Letter</th>
-                                    <th>Rom.</th>
-                                    <th class="rounded-tr-lg">Word</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅐ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/ae.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>ae</td><td>개 (dog)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅒ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/yae.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>yae</td><td>시계 (watch/clock)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅔ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/e.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>e</td><td>네 (yes)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅖ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/ye.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>ye</td><td>예쁘다 (to be pretty)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅘ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/wa.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>wa</td><td>과일 (fruit)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅙ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/wae.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>wae</td><td>회사 (company)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅚ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/oe.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>oe</td><td>되다 (to become)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅝ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/wo.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>wo</td><td>뭐 (what)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅞ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/we.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>we</td><td>스웨터 (sweater)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅟ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/wi.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>wi</td><td>쉬다 (to rest)</td>
-                                </tr>
-                                <tr>
-                                    <td class="hangul-char-col">
-                                        <span>ㅢ</span>
-                                        <span class="audio-icon" onclick="playAudio('https://your-domain.com/audio/diphthongs/ui.mp3')"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.953 9.953 0 0118 10a9.953 9.953 0 01-1.929 6.071 1 1 0 01-1.414-1.414A7.953 7.953 0 0016 10a7.953 7.953 0 00-1.586-4.957 1 1 0 010-1.414zM12.243 5.343a1 1 0 011.414 0A3.953 3.953 0 0114 10a3.953 3.953 0 01-.343 2.657 1 1 0 01-1.414-1.414A1.953 1.953 0 0012 10a1.953 1.953 0 00.293-1.343 1 1 0 01-.293-1.414z" clip-rule="evenodd"></path></svg></span>
-                                    </td>
-                                    <td>ui</td><td>의자 (chair)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                
-                </div>
-        </main>
-    </div>
+            </div>
+    </main>
 
     <script>
         const sidebar = document.getElementById('sidebar');
         const openMenuButton = document.getElementById('open-menu-button');
         const closeMenuButton = document.getElementById('close-menu-button');
         const overlay = document.getElementById('overlay');
-
-        function openSidebar() {
-            sidebar.classList.remove('sidebar-closed');
-            sidebar.classList.add('sidebar-open');
-            overlay.classList.remove('hidden');
-        }
-
-        function closeSidebar() {
-            sidebar.classList.remove('sidebar-open');
-            sidebar.classList.add('sidebar-closed');
-            overlay.classList.add('hidden');
-        }
-        
+        function openSidebar() { sidebar.classList.remove('sidebar-closed'); sidebar.classList.add('sidebar-open'); overlay.classList.remove('hidden'); }
+        function closeSidebar() { sidebar.classList.remove('sidebar-open'); sidebar.classList.add('sidebar-closed'); overlay.classList.add('hidden'); }
         openMenuButton.addEventListener('click', openSidebar);
         closeMenuButton.addEventListener('click', closeSidebar);
         overlay.addEventListener('click', closeSidebar);
-
-        function scrollToSection(event, id) {
-            event.preventDefault(); 
-            const el = document.getElementById(id);
-            if (el) {
-                el.scrollIntoView({ behavior: 'smooth' });
-            }
-            if (window.innerWidth < 1024) {
-                closeSidebar();
-            }
-        }
-
-        function playAudio(url) {
-            if (url) {
-                const audio = new Audio(url);
-                audio.play().catch(e => console.error("Error playing audio:", e));
-            } else {
-                console.warn("No audio URL provided.");
-            }
-        }
+        function scrollToSection(event, id) { event.preventDefault(); const el = document.getElementById(id); if (el) { el.scrollIntoView({ behavior: 'smooth' }); } if (window.innerWidth < 1024) { closeSidebar(); } }
+        function playAudio(url) { if (url) { const audio = new Audio(url); audio.play().catch(e => console.error("Error playing audio:", e)); } else { console.warn("No audio URL provided."); } }
     </script>
 </body>
 </html>
