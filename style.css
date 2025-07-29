@@ -9,11 +9,11 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #f0f4f8;
     margin: 0;
-    padding: 0; /* Changed from 20px for the new layout */
+    padding: 0;
     min-height: 100vh;
     box-sizing: border-box;
     position: relative;
-    overflow-x: hidden; /* Prevent horizontal scroll from off-screen sidebar */
+    overflow-x: hidden;
 }
 .notebook-page {
     background-color: #ffffff;
@@ -202,260 +202,66 @@ td {
 .double-consonants-table td .hangul-char-col {
     color: #553c9a;
 }
-.romanization-col {
-    width: 25%;
-}
-.word-col {
-    width: 50%;
-}
-.syllable-block-info {
-    background-color: #f8fafc;
-    border-radius: 8px;
-    padding: 15px;
-    margin-top: 15px;
-    border: 1px solid #edf2f7;
-}
-.syllable-block-info p {
-    margin-bottom: 10px;
-    color: #333;
-}
-.syllable-example {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 12px;
-}
-.syllable-char {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #4299e1;
-    background-color: #e0f2fe;
-    padding: 4px 6px;
-    border-radius: 4px;
-    border: 1px solid #a0aec0;
-    text-align: center;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    flex-shrink: 0;
-}
-.stroke-order-guide {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.85rem;
-    color: #555;
-    background-color: #f0f4f8;
-    padding: 8px 10px;
-    border-radius: 4px;
-    white-space: normal;
-    word-break: keep-all;
-    line-height: 1.5;
-    flex-grow: 1;
-}
-.content-block {
-    background-color: #f8fafc;
-    border-radius: 8px;
-    padding: 15px;
-    margin-top: 15px;
-    border: 1px solid #edf2f7;
-}
-.content-block p {
-    margin-bottom: 10px;
-    color: #333;
-}
-.content-block ul {
-    list-style: disc;
-    list-style-position: inside;
-    margin-left: 15px;
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 0.9rem;
-}
-.content-block ul li {
-    margin-bottom: 5px;
-}
-.table-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #4a5568;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
+.romanization-col { width: 25%; }
+.word-col { width: 50%; }
+.syllable-block-info { background-color: #f8fafc; border-radius: 8px; padding: 15px; margin-top: 15px; border: 1px solid #edf2f7; }
+.syllable-block-info p { margin-bottom: 10px; color: #333; }
+.syllable-example { display: flex; align-items: center; gap: 6px; margin-bottom: 12px; }
+.syllable-char { font-size: 2rem; font-weight: 700; color: #4299e1; background-color: #e0f2fe; padding: 4px 6px; border-radius: 4px; border: 1px solid #a0aec0; text-align: center; width: 42px; height: 42px; line-height: 42px; flex-shrink: 0; }
+.stroke-order-guide { font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; color: #555; background-color: #f0f4f8; padding: 8px 10px; border-radius: 4px; white-space: normal; word-break: keep-all; line-height: 1.5; flex-grow: 1; }
+.content-block { background-color: #f8fafc; border-radius: 8px; padding: 15px; margin-top: 15px; border: 1px solid #edf2f7; }
+.content-block p { margin-bottom: 10px; color: #333; }
+.content-block ul { list-style: disc; list-style-position: inside; margin-left: 15px; margin-bottom: 10px; color: #333; font-size: 0.9rem; }
+.content-block ul li { margin-bottom: 5px; }
+.table-title { font-size: 1.1rem; font-weight: 600; color: #4a5568; margin-top: 15px; margin-bottom: 10px; }
 .batchim-table th { background-color: #805ad5; }
 .batchim-table td { background-color: #ede9fe; }
 .sound-change-table th { background-color: #d69e2e; }
 .sound-change-table td { background-color: #fefcbf; }
-.hangul-example {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #2d3748;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.hangul-example .sound-change-icon {
-    flex-shrink: 0;
-}
-.hangul-example .sound-change-arrow {
-    color: #ef4444;
-    font-weight: bold;
-    margin: 0 5px;
-    flex-shrink: 0;
-}
-.hangul-example span {
-    color: #4299e1;
-}
-.hangul-example .pronunciation {
-    color: #e53e3e;
-}
-.hangul-example .explanation {
-    font-size: 0.8rem;
-    color: #718096;
-    font-style: italic;
-    margin-top: 5px;
-    flex-basis: 100%;
-    margin-left: calc(1.25rem + 0.5rem);
-}
-.advanced-rules-intro {
-    background-color: #fffbeb;
-    border-left: 4px solid #f59e0b;
-    padding: 12px 16px;
-    margin-top: 10px;
-    border-radius: 6px;
-}
-.advanced-rules-intro p {
-    color: #b45309;
-    font-size: 0.9rem;
-}
-.table-of-contents {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-.table-of-contents h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 15px;
-    text-align: center;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #cbd5e0;
-}
-.table-of-contents ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.table-of-contents ul li {
-    margin-bottom: 8px;
-}
-.table-of-contents ul li a {
-    font-size: 1rem;
-    color: #4299e1;
-    text-decoration: none;
-    display: block;
-    padding: 6px 10px;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-    cursor: pointer;
-}
-.table-of-contents ul li a:hover {
-    background-color: #ebf8ff;
-    color: #2b6cb0;
-}
-.table-of-contents ul li a strong {
-    color: #2d3748;
-    margin-right: 5px;
-}
+.hangul-example { font-size: 1.1rem; font-weight: 600; color: #2d3748; margin-top: 5px; margin-bottom: 5px; display: flex; align-items: center; flex-wrap: wrap; }
+.hangul-example .sound-change-icon { flex-shrink: 0; }
+.hangul-example .sound-change-arrow { color: #ef4444; font-weight: bold; margin: 0 5px; flex-shrink: 0; }
+.hangul-example span { color: #4299e1; }
+.hangul-example .pronunciation { color: #e53e3e; }
+.hangul-example .explanation { font-size: 0.8rem; color: #718096; font-style: italic; margin-top: 5px; flex-basis: 100%; margin-left: calc(1.25rem + 0.5rem); }
+.advanced-rules-intro { background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin-top: 10px; border-radius: 6px; }
+.advanced-rules-intro p { color: #b45309; font-size: 0.9rem; }
 @media (max-width: 768px) {
-    .notebook-page {
-        padding: 15px;
-    }
-    .stage-title {
-        font-size: 1.5rem;
-    }
-    .purpose-section, .tutor-note {
-        font-size: 0.85rem;
-        padding: 8px 10px;
-    }
-    .intro-section {
-        padding: 8px 10px;
-    }
-    .intro-section .intro-title {
-        font-size: 1rem;
-    }
-    .intro-section ul {
-        font-size: 0.8rem;
-        margin-left: 0;
-    }
-    .intro-section ul li {
-        padding-left: 15px;
-    }
-    .intro-section ul li::before {
-        font-size: 1em;
-    }
-    .section-heading {
-        font-size: 1.2rem;
-        scroll-margin-top: 20px;
-    }
-    .section-heading .number {
-        font-size: 1.3rem;
-    }
-    th, td {
-        padding: 5px;
-        font-size: 0.75rem;
-    }
-    .hangul-char-col {
-        font-size: 1.2rem;
-    }
-    .syllable-char {
-        font-size: 1.8rem;
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-        margin-right: 8px;
-    }
-    .stroke-order-guide {
-        font-size: 0.75rem;
-        padding: 6px 8px;
-    }
-    .content-columns {
-        flex-direction: column;
-        gap: 0;
-    }
-    .column {
-        width: 100%;
-        min-width: unset;
-    }
-    .hangul-example .explanation {
-        margin-left: 0;
-    }
-    .table-of-contents h2 {
-        font-size: 1.2rem;
-    }
-    .table-of-contents ul li a {
-        font-size: 0.9rem;
-        padding: 5px 8px;
-    }
+    .notebook-page { padding: 15px; }
+    .stage-title { font-size: 1.5rem; }
+    .purpose-section, .tutor-note { font-size: 0.85rem; padding: 8px 10px; }
+    .intro-section { padding: 8px 10px; }
+    .intro-section .intro-title { font-size: 1rem; }
+    .intro-section ul { font-size: 0.8rem; margin-left: 0; }
+    .intro-section ul li { padding-left: 15px; }
+    .intro-section ul li::before { font-size: 1em; }
+    .section-heading { font-size: 1.2rem; scroll-margin-top: 20px; }
+    .section-heading .number { font-size: 1.3rem; }
+    th, td { padding: 5px; font-size: 0.75rem; }
+    .hangul-char-col { font-size: 1.2rem; }
+    .syllable-char { font-size: 1.8rem; width: 36px; height: 36px; line-height: 36px; margin-right: 8px; }
+    .stroke-order-guide { font-size: 0.75rem; padding: 6px 8px; }
+    .content-columns { flex-direction: column; gap: 0; }
+    .column { width: 100%; min-width: unset; }
+    .hangul-example .explanation { margin-left: 0; }
 }
 
-/* --- START: NEW STYLES FOR NAVIGATION DRAWER --- */
+
+/* === START: NEW SIDEBAR STYLES (REPLACES PREVIOUS SIDEBAR CODE) === */
+
+/* MOBILE-FIRST Styles (for the slide-out menu on click) */
 #sidebar {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
-    width: 280px;
+    width: 300px; /* Full width for mobile view when open */
     background-color: #f8fafc;
     border-right: 1px solid #e2e8f0;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     z-index: 50;
     transition: transform 0.3s ease-in-out;
-    overflow-y: auto; /* Allow sidebar to scroll if content is long */
+    overflow-y: auto;
 }
 #sidebar.sidebar-closed {
     transform: translateX(-100%);
@@ -472,11 +278,13 @@ td {
     font-size: 1rem;
     color: #4299e1;
     text-decoration: none;
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 10px 15px;
     border-radius: 6px;
     transition: background-color 0.2s ease;
     cursor: pointer;
+    white-space: nowrap; /* Prevent text wrapping during transition */
 }
 #sidebar ul li a:hover {
     background-color: #ebf8ff;
@@ -485,26 +293,58 @@ td {
 #sidebar ul li a strong {
     color: #2d3748;
     margin-right: 8px;
+    min-width: 20px;
+    text-align: center;
+    transition: margin 0.3s ease-in-out;
 }
+
+/* DESKTOP Styles (for the hover-to-expand effect) */
 @media (min-width: 1024px) {
-    .page-container {
-        display: flex;
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-    #sidebar {
-        position: sticky;
-        top: 20px;
-        height: calc(100vh - 40px);
-        flex-shrink: 0;
-        transform: translateX(0);
-        box-shadow: none;
-        margin: 20px 0 20px 20px; /* Add margin */
-        border-radius: 8px;
-    }
     .main-content {
-        flex-grow: 1;
-        padding: 20px;
-        min-width: 0;
+        /* Add left padding to make space for the collapsed sidebar */
+        padding: 20px 20px 20px 100px;
+        transition: padding-left 0.3s ease-in-out; /* Smooth transition */
+    }
+    
+    #sidebar {
+        /* Override mobile fixed position and set collapsed width */
+        position: fixed;
+        width: 80px;
+        transform: translateX(0);
+        transition: width 0.3s ease-in-out;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    #sidebar:hover {
+        /* Expand the sidebar on hover */
+        width: 300px;
+    }
+    
+    /* Hide text when sidebar is collapsed */
+    #sidebar:not(:hover) h2 span,
+    #sidebar:not(:hover) ul li a span {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    /* Style for the text spans inside links */
+    #sidebar h2 span,
+    #sidebar ul li a span {
+        transition: opacity 0.2s ease-in-out;
+        transition-delay: 0.1s; /* Add a small delay so it appears after expanding */
+    }
+
+    #sidebar h2 {
+        padding-left: 10px;
+    }
+    
+    /* Adjust padding and number margin for alignment */
+    #sidebar ul li a {
+        padding-left: 20px;
+    }
+    #sidebar ul li a strong {
+        margin-left: 5px;
+    }
+    #sidebar:hover ul li a strong {
+        margin-left: 0;
     }
 }
