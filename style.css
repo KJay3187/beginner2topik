@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-y: auto;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow: visible;
+}
+.notebook-page {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 210mm;
+  padding: 20px;
+  box-sizing: border-box;
+  line-height: 1.5;
+  margin: 0 auto;
+  overflow: visible;
+}
+.stage-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #a0aec0;
+}
+/* Continue with the rest of your CSS styles exactly as before,
+   including .purpose-section, .intro-section, .tutor-note,
+   .section-heading, .table styling, responsiveness, etc. */

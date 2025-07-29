@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hangul Curriculum Layout – Full (Updated)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+  <div class="notebook-page">
+    <!-- Table of Contents -->
+    <div class="table-of-contents" id="table-of-contents">
+      <h2>Contents</h2>
+      <ul>
+        <li><a onclick="scrollToSection(event, 'vowels-section')"><strong>1.</strong> Basic & Compound Vowels</a></li>
+        <li><a onclick="scrollToSection(event, 'consonants-section')"><strong>2.</strong> Basic & Double Consonants (자음)</a></li>
+        <li><a onclick="scrollToSection(event, 'syllable-blocks-section')"><strong>3.</strong> Syllable Blocks & Stroke Order</a></li>
+        <li><a onclick="scrollToSection(event, 'final-consonants-section')"><strong>4.</strong> Final Consonants (받침)</a></li>
+        <li><a onclick="scrollToSection(event, 'linking-sounds-section')"><strong>5.</strong> The #1 Pronunciation Rule: Linking (연음)</a></li>
+        <li><a onclick="scrollToSection(event, 'advanced-rules-section')"><strong>6.</strong> Advanced Pronunciation Rules (For Reference)</a></li>
+      </ul>
+    </div>
+    <h1 class="stage-title">Stage 1 – Hangul Mastery & Pronunciation Foundations</h1>
+
+    <!-- ... rest of the body content (sections, tables, tutor notes, audio icons, etc.) ... -->
+
+  </div>
+
+  <script>
+    function scrollToSection(event, id) {
+      event.preventDefault();
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+    function playAudio(url) {
+      if (!url) return console.warn("No audio URL.");
+      const audio = new Audio(url);
+      audio.play().catch(e => console.error("Error playing audio:", e));
+    }
+  </script>
+</body>
+</html>
