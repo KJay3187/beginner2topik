@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-    height: 100%; /* Ensure html takes full height */
-    overflow-y: auto; /* Explicitly make html scrollable vertically */
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-y: auto;
 }
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f0f4f8; /* Light blue-gray background */
-    margin: 0; /* Remove default body margin */
-    padding: 20px; /* Add padding directly to body */
-    min-height: 100vh; /* Ensure body takes at least full viewport height */
-    box-sizing: border-box; /* Include padding in height calculation */
-    position: relative; /* Sometimes helps with anchor positioning */
-    overflow: visible; /* Ensure body content is not clipped, let html handle scroll */
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0; /* Changed from 20px for the new layout */
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll from off-screen sidebar */
 }
 .notebook-page {
     background-color: #ffffff;
@@ -20,12 +21,12 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     width: 100%;
-    max-width: 210mm; /* A5 width */
+    max-width: 210mm;
     padding: 20px;
     box-sizing: border-box;
     line-height: 1.5;
-    margin: 0 auto; /* Center horizontally within the body's padding */
-    overflow: visible; /* Crucial: Ensure this element does NOT create its own scrollbar */
+    margin: 0 auto;
+    overflow: visible;
 }
 .stage-title {
     font-size: 1.8rem;
@@ -43,7 +44,7 @@ body {
     padding: 10px 15px;
     background-color: #e2e8f0;
     border-radius: 6px;
-    border-left: 4px solid #63b3ed; /* Accent border */
+    border-left: 4px solid #63b3ed;
 }
 .tutor-note {
     font-size: 0.95rem;
@@ -68,30 +69,30 @@ body {
 .intro-section {
     margin-bottom: 20px;
     padding: 10px 15px;
-    background-color: #ecfdf5; /* Light green for intro */
+    background-color: #ecfdf5;
     border-radius: 6px;
     border: 1px solid #a7f3d0;
 }
 .intro-section .intro-title {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #059669; /* Darker green for title */
+    color: #059669;
     margin-bottom: 8px;
 }
 .intro-section ul {
-    list-style: none; /* Remove default list style */
+    list-style: none;
     padding-left: 0;
-    margin-left: 0; /* Align bullets to the left */
+    margin-left: 0;
     font-size: 0.9rem;
     color: #10b981;
 }
 .intro-section ul li {
     margin-bottom: 3px;
     position: relative;
-    padding-left: 18px; /* Space for custom bullet */
+    padding-left: 18px;
 }
 .intro-section ul li::before {
-    content: '•'; /* Custom bullet point */
+    content: '•';
     position: absolute;
     left: 0;
     color: #059669;
@@ -99,7 +100,6 @@ body {
     font-size: 1.2em;
     line-height: 1;
 }
-
 .section-heading {
     font-size: 1.35rem;
     font-weight: 600;
@@ -110,27 +110,27 @@ body {
     border-bottom: 1px dashed #cbd5e0;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* To push arrow to the right */
-    scroll-margin-top: 50px; /* Ensures space above the target when scrolled to */
+    justify-content: space-between;
+    scroll-margin-top: 50px;
 }
-.section-heading .title-content { /* New wrapper for title and number */
+.section-heading .title-content {
     display: flex;
     align-items: center;
 }
 .section-heading .number {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #4299e1; /* Blue for numbers */
+    color: #4299e1;
     margin-right: 10px;
 }
 .section-heading .up-arrow {
     cursor: pointer;
-    color: #63b3ed; /* Blue for the arrow */
+    color: #63b3ed;
     transition: transform 0.2s ease-in-out;
 }
 .section-heading .up-arrow:hover {
-    transform: translateY(-2px); /* Slight lift on hover */
-    color: #4299e1; /* Darker blue on hover */
+    transform: translateY(-2px);
+    color: #4299e1;
 }
 .content-columns {
     display: flex;
@@ -139,8 +139,8 @@ body {
     gap: 20px;
 }
 .column {
-    flex: 1 1 48%; /* Each column takes roughly half width, allows shrinking/growing */
-    min-width: 280px; /* Minimum width before wrapping */
+    flex: 1 1 48%;
+    min-width: 280px;
 }
 table {
     width: 100%;
@@ -165,59 +165,49 @@ td {
     color: #333;
     background-color: rgba(255, 255, 255, 0.8);
 }
-/* Styling for the Hangul character column with audio icon */
 .hangul-char-col {
     font-size: 1.5rem;
     font-weight: 700;
     color: #2d3748;
     width: 25%;
-    /* Ensure content inside is flexed for alignment */
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Pushes text and icon apart */
+    justify-content: space-between;
 }
-.hangul-char-col span:first-child { /* The actual Hangul character */
+.hangul-char-col span:first-child {
     flex-shrink: 0;
 }
 .audio-icon {
     cursor: pointer;
-    color: #63b3ed; /* Blue for the audio icon */
+    color: #63b3ed;
     transition: color 0.2s ease;
     flex-shrink: 0;
-    margin-left: 8px; /* Space between char and icon */
+    margin-left: 8px;
 }
 .audio-icon:hover {
-    color: #4299e1; /* Darker blue on hover */
+    color: #4299e1;
 }
-
-/* Color Coding for Tables */
-.vowels-table th { background-color: #63b3ed; /* Blue */ }
-.vowels-table td { background-color: #e0f2fe; /* Light Blue */ }
-
-.diphthongs-table th { background-color: #f6ad55; /* Orange */ }
-.diphthongs-table td { background-color: #fffaf0; /* Light Orange */ }
-
-.basic-consonants-table th { background-color: #48bb78; /* Green */ }
-.basic-consonants-table td { background-color: #e6fffa; /* Light Green */ }
-
-.double-consonants-table th { background-color: #9f7aea; /* Purple */ }
+.vowels-table th { background-color: #63b3ed; }
+.vowels-table td { background-color: #e0f2fe; }
+.diphthongs-table th { background-color: #f6ad55; }
+.diphthongs-table td { background-color: #fffaf0; }
+.basic-consonants-table th { background-color: #48bb78; }
+.basic-consonants-table td { background-color: #e6fffa; }
+.double-consonants-table th { background-color: #9f7aea; }
 .double-consonants-table td {
-    background-color: #e9d8fd; /* Lighter purple for double consonant rows */
-    color: #6b46c1; /* Darker purple text for double consonants */
+    background-color: #e9d8fd;
+    color: #6b46c1;
     font-weight: 600;
 }
 .double-consonants-table td .hangul-char-col {
-    color: #553c9a; /* Even darker purple for the character itself */
+    color: #553c9a;
 }
-
 .romanization-col {
     width: 25%;
 }
 .word-col {
     width: 50%;
 }
-
-/* Syllable Blocks & Stroke Order Specific Styles */
 .syllable-block-info {
     background-color: #f8fafc;
     border-radius: 8px;
@@ -231,8 +221,8 @@ td {
 }
 .syllable-example {
     display: flex;
-    align-items: center; /* ✅ vertical centering */
-    gap: 6px; /* ✅ reduced horizontal space */
+    align-items: center;
+    gap: 6px;
     margin-bottom: 12px;
 }
 .syllable-char {
@@ -245,8 +235,8 @@ td {
     border: 1px solid #a0aec0;
     text-align: center;
     width: 42px;
-    height: 42px; /* ✅ consistent box height */
-    line-height: 42px; /* ✅ vertical alignment */
+    height: 42px;
+    line-height: 42px;
     flex-shrink: 0;
 }
 .stroke-order-guide {
@@ -257,7 +247,7 @@ td {
     padding: 8px 10px;
     border-radius: 4px;
     white-space: normal;
-    word-break: keep-all; /* ✅ keeps phrases like "left to right" together */
+    word-break: keep-all;
     line-height: 1.5;
     flex-grow: 1;
 }
@@ -290,45 +280,42 @@ td {
     margin-top: 15px;
     margin-bottom: 10px;
 }
-/* Color Coding for Tables */
-.batchim-table th { background-color: #805ad5; /* Deep Purple */ }
-.batchim-table td { background-color: #ede9fe; /* Light Purple */ }
-
-.sound-change-table th { background-color: #d69e2e; /* Dark Orange */ }
-.sound-change-table td { background-color: #fefcbf; /* Light Yellow */ }
-
+.batchim-table th { background-color: #805ad5; }
+.batchim-table td { background-color: #ede9fe; }
+.sound-change-table th { background-color: #d69e2e; }
+.sound-change-table td { background-color: #fefcbf; }
 .hangul-example {
     font-size: 1.1rem;
     font-weight: 600;
     color: #2d3748;
     margin-top: 5px;
     margin-bottom: 5px;
-    display: flex; /* Ensure flex for icon/arrow alignment */
+    display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    flex-wrap: wrap;
 }
 .hangul-example .sound-change-icon {
-    flex-shrink: 0; /* Prevent icon from shrinking */
+    flex-shrink: 0;
 }
 .hangul-example .sound-change-arrow {
-    color: #ef4444; /* Red color for the arrow */
+    color: #ef4444;
     font-weight: bold;
     margin: 0 5px;
-    flex-shrink: 0; /* Prevent arrow from shrinking */
+    flex-shrink: 0;
 }
 .hangul-example span {
-    color: #4299e1; /* Blue for Hangul characters */
+    color: #4299e1;
 }
 .hangul-example .pronunciation {
-    color: #e53e3e; /* Red for pronunciation */
+    color: #e53e3e;
 }
 .hangul-example .explanation {
     font-size: 0.8rem;
     color: #718096;
     font-style: italic;
     margin-top: 5px;
-    flex-basis: 100%; /* Make explanation take full width below example */
-    margin-left: calc(1.25rem + 0.5rem); /* Align with text after icon */
+    flex-basis: 100%;
+    margin-left: calc(1.25rem + 0.5rem);
 }
 .advanced-rules-intro {
     background-color: #fffbeb;
@@ -341,8 +328,6 @@ td {
     color: #b45309;
     font-size: 0.9rem;
 }
-
-/* Table of Contents specific styles */
 .table-of-contents {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
@@ -370,24 +355,22 @@ td {
 }
 .table-of-contents ul li a {
     font-size: 1rem;
-    color: #4299e1; /* Blue for links */
+    color: #4299e1;
     text-decoration: none;
     display: block;
     padding: 6px 10px;
     border-radius: 4px;
     transition: background-color 0.2s ease;
-    cursor: pointer; /* Indicate it's clickable */
+    cursor: pointer;
 }
 .table-of-contents ul li a:hover {
-    background-color: #ebf8ff; /* Light blue on hover */
-    color: #2b6cb0; /* Darker blue on hover */
+    background-color: #ebf8ff;
+    color: #2b6cb0;
 }
 .table-of-contents ul li a strong {
-    color: #2d3748; /* Keep topic numbers dark */
+    color: #2d3748;
     margin-right: 5px;
 }
-
-
 @media (max-width: 768px) {
     .notebook-page {
         padding: 15px;
@@ -417,7 +400,7 @@ td {
     }
     .section-heading {
         font-size: 1.2rem;
-        scroll-margin-top: 20px; /* Adjusted for smaller screens */
+        scroll-margin-top: 20px;
     }
     .section-heading .number {
         font-size: 1.3rem;
@@ -430,7 +413,7 @@ td {
         font-size: 1.2rem;
     }
     .syllable-char {
-        font-size: 1.8rem; /* Adjusted for smaller screens */
+        font-size: 1.8rem;
         width: 36px;
         height: 36px;
         line-height: 36px;
@@ -449,7 +432,7 @@ td {
         min-width: unset;
     }
     .hangul-example .explanation {
-        margin-left: 0; /* Reset margin for full width on small screens */
+        margin-left: 0;
     }
     .table-of-contents h2 {
         font-size: 1.2rem;
@@ -457,5 +440,71 @@ td {
     .table-of-contents ul li a {
         font-size: 0.9rem;
         padding: 5px 8px;
+    }
+}
+
+/* --- START: NEW STYLES FOR NAVIGATION DRAWER --- */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 280px;
+    background-color: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    z-index: 50;
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto; /* Allow sidebar to scroll if content is long */
+}
+#sidebar.sidebar-closed {
+    transform: translateX(-100%);
+}
+#sidebar.sidebar-open {
+    transform: translateX(0);
+}
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#sidebar ul li a {
+    font-size: 1rem;
+    color: #4299e1;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+#sidebar ul li a:hover {
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+}
+#sidebar ul li a strong {
+    color: #2d3748;
+    margin-right: 8px;
+}
+@media (min-width: 1024px) {
+    .page-container {
+        display: flex;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    #sidebar {
+        position: sticky;
+        top: 20px;
+        height: calc(100vh - 40px);
+        flex-shrink: 0;
+        transform: translateX(0);
+        box-shadow: none;
+        margin: 20px 0 20px 20px; /* Add margin */
+        border-radius: 8px;
+    }
+    .main-content {
+        flex-grow: 1;
+        padding: 20px;
+        min-width: 0;
     }
 }
